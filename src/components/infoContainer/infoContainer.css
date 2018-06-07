@@ -1,0 +1,30 @@
+.info-container{
+    display: flex;
+    width: 65%;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    background-color: #2cc197;
+    align-items: center;
+}
+
+.account-info{
+    display: block;
+    width: 100%;
+}
+
+.account-balance{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    overflow: hidden;
+    font-size: 6.5vw;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.extraction-limit{
+    overflow: hidden;
+    font-size: 15px;
+    text-overflow: ellipsis;
+}

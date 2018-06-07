@@ -1,0 +1,24 @@
+.menu-btn{
+    position: relative;
+    display: block;
+    padding: 0;
+    margin: 20px 0;
+    margin-bottom: 30px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition: all .6s ease-in-out;
+       -moz-transition: all .6s ease-in-out;
+         -o-transition: all .6s ease-in-out;
+            transition: all .6s ease-in-out;
+    text-align: left;
+    vertical-align: text-bottom;
+    color: #666;
+    border: 0;
+    background-color: transparent;
+}
+
+.menu-btn:hover{
+    margin-left: 10px;
+    color: #2cc197;
+}

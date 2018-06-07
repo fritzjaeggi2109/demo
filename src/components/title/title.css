@@ -1,0 +1,10 @@
+.your-account{
+    padding-left: 24px;
+    margin: 0;
+    margin-left: -30px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    color: #2a333d;
+    border-left: 6px solid #2cc197;
+}

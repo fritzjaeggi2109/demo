@@ -1,0 +1,35 @@
+.header{
+    display: flex;
+    width: 65%;
+    margin: 7% auto 0;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.avatar {
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.logo {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    text-align: left;
+    vertical-align: text-bottom;
+}
+
+.align-left {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+}
+
+#user-name {
+    display: inline-block;
+    margin-right: 10px;
+    overflow: hidden;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    color: #fff;
+}

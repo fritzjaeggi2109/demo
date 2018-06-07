@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titleContainer{
+    width: 100%;
+    border-bottom: 1px solid #c6c6c6;
+}
+.inputContainer{
+    width: 100%;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+.inputForm{
+    width: 100%;
+    border: 1px solid #c6c6c6;
+    border-radius: 3px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.btnContainer{
+    width: 100%;
+}
+.btn{
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 3px;
+    border: none;
+    background-color: #208b6d;
+    color: #eee;
+    font-weight: 600;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #114d3c;
+}
+
+.modalSelect{
+    border: 1px solid #c6c6c6;
+    padding: 5px 10px;
+    width: 100%;
+}
