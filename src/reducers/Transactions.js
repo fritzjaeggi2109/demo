@@ -3,33 +3,35 @@ import {
     EXTRACT,
     PAY_SERVICE,
     PURCHASE,
-    TRANSFER
+    TRANSFER,
+    ADD,
+    MINUS
 } from '../actions/types';
 
 const INITIAL_STATE = {
     balance: 5000,
-    extractionLimit: 1000
+    extractionLimit: 1000,
+    response: null
 };
 
 export default (state = INITIAL_STATE, action) => {
-    let amount = 0;
+    let { balance } = state;
     switch (action.type) {
         case DEPOSIT:
-            amount = state.balance + parseInt(action.payload, 10);
-            return { ...state, balance: amount };
+            return { ...state, balance: operate(balance, ADD, action.payload) };
         case EXTRACT:
-            amount = state.balance - parseInt(action.payload, 10);
-            return { ...state, balance: amount };
+            return { ...state, balance: operate(balance, MINUS, action.payload) };
         case PAY_SERVICE:
-            amount = state.balance - parseInt(action.payload, 10);
-            return { ...state, balance: amount };
+            return { ...state, balance: operate(balance, MINUS, action.payload) };
         case PURCHASE:
-            amount = state.balance - parseInt(action.payload, 10);
-            return { ...state, balance: amount };
+            return { ...state, balance: operate(balance, MINUS, action.payload) };
         case TRANSFER:
-            amount = state.balance - parseInt(action.payload, 10);
-            return { ...state, balance: amount };
+            return { ...state, balance: operate(balance, MINUS, action.payload) };
         default:
             return state;
     }
+}
+
+function operate (balance, operand, amount) {
+    return (operand === ADD) ? balance + parseInt(amount,10) : balance - parseInt(amount,10) 
 }

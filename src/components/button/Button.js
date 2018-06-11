@@ -1,10 +1,7 @@
 import React from 'react';
 import './button.css';
 
-const Button = ({ btnText, onClick }) => {
-    return (
-        <button className="menu-btn" onClick={onClick}>{ btnText }</button>
-    );
-};
+const Button = ({ btnText, onClick, btnstyle = 'btn' }) => 
+    <button className={btnstyle} onClick={onClick}>{ btnText }</button>;
 
 export default Button;

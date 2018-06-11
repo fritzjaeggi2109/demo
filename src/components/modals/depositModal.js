@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { deposit } from '../../actions';
 import './deposit-modal.css';
+import Button from '../button/Button';
 
 class DepositModal extends React.Component {
     constructor(props) {
@@ -43,12 +44,10 @@ class DepositModal extends React.Component {
                         onChange={(e)=>this.onInputChange(e)} />
                 </div>
                 <div className="btnContainer">
-                    <button
+                    <Button
+                        btnText="Deposit"
                         onClick={this.handelDeposit.bind(this)} 
-                        className="btn"
-                    >
-                        Deposit
-                    </button>
+                    />
                 </div>
             </div>
         );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { extract } from '../../actions';
+import Button from '../button/Button';
 
 class ExtractModal extends React.Component {
     constructor(props) {
@@ -21,10 +22,13 @@ class ExtractModal extends React.Component {
     handelExtract() {
         if(this.state.amount !== ''){
             const { amount } = this.state;
-            if(parseInt(amount, 10) > this.props.extractionLimit){
+            const { balance, extractionLimit } = this.props;
+            if(parseInt(amount, 10) > extractionLimit){
                 alert(`The limit of extraction can not exceed $${this.props.extractionLimit}`);
+            }else if(parseInt(amount, 10) > balance ){
+                alert(`You do not have enough money to make this transaction`);
             }else{
-                this.props.extract(this.state.amount);
+                this.props.extract(amount);
                 this.props.hide();
                 this.setState({amount: ''});
             }
@@ -47,12 +51,10 @@ class ExtractModal extends React.Component {
                         onChange={(e)=>this.onInputChange(e)} />
                 </div>
                 <div className="btnContainer">
-                    <button
-                        onClick={this.handelExtract.bind(this)} 
-                        className="btn"
-                    >
-                        Extract
-                    </button>
+                    <Button
+                        btnText="Extract"
+                        onClick={this.handelExtract.bind(this)}
+                    />
                 </div>
             </div>
         );
@@ -60,8 +62,9 @@ class ExtractModal extends React.Component {
 }
 
 const mapStateToProps = state => {
-    const { extractionLimit } = state.transactions;
+    const { balance, extractionLimit } = state.transactions;
     return {
+        balance,
         extractionLimit
     };
 };

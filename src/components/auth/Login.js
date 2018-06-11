@@ -1,6 +1,8 @@
 import React from 'react';
 import './login.css';
 import credentials from './credentials.json';
+import Button from '../button/Button';
+import Title from '../title/Title';
 
 class Login extends React.Component {
     constructor(props){
@@ -37,7 +39,7 @@ class Login extends React.Component {
         let { user, password } = this.state;
         return (
             <div className="login-container">
-                <h3 id="login-title">Log In</h3>
+                <Title titlestyle="login-title" titleText="Log In" />
                 <input
                     value={ user } 
                     className="form-input" 
@@ -52,12 +54,11 @@ class Login extends React.Component {
                     placeholder="Password" 
                     onChange={(e) => this.onPasswordInputChange(e)}
                 />
-                <button 
-                    id="login-btn" 
+                <Button 
+                    btnstyle="login-btn"
+                    btnText="Login"
                     onClick={this.makeLogin.bind(this)}
-                >
-                    Ok
-                </button>
+                />
             </div>
         );
     }

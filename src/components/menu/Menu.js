@@ -49,35 +49,40 @@ class Menu extends React.Component {
     render() {
         return (
             <div className="menu-container">
-                <Title titleText="Your Account" />
+                <Title titlestyle="your-account" titleText="Your Account" />
                 <Button onClick={() => { 
                     this.show(); 
                     this.setState({action:'extract'})  
-                    }} 
+                    }}
+                    btnstyle="menu-btn" 
                     btnText="Extract money" 
                 />
                 <Button onClick={() => { 
                     this.show(); 
                     this.setState({action:'deposit'})  
                     }} 
+                    btnstyle="menu-btn"
                     btnText="Deposit money" 
                 />
                 <Button onClick={() => { 
                     this.show(); 
                     this.setState({action:'pay-service'})  
                     }} 
+                    btnstyle="menu-btn"
                     btnText="Pay services" 
                 />
                 <Button onClick={() => { 
                     this.show(); 
                     this.setState({action:'buy-euros'})  
                     }} 
+                    btnstyle="menu-btn"
                     btnText="Purchase euros" 
                 />
                 <Button onClick={() => { 
                     this.show(); 
                     this.setState({action:'transfer-money'})  
                     }}  
+                    btnstyle="menu-btn"
                     btnText="Transfer money" 
                 />
                 <Rodal 

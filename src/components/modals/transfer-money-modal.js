@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import { transfer } from '../../actions';
 import './buy-euros-modal.css';
+import Button from '../button/Button';
 
 class TransferMoneyModal extends React.Component {
     constructor(props) {
@@ -69,12 +70,10 @@ class TransferMoneyModal extends React.Component {
                     </div>
                 </div>
                 <div className="btnContainer">
-                    <button
+                    <Button 
+                        btnText="Transfer"
                         onClick={this.handleTransfer.bind(this)}
-                        className="btn"
-                    >
-                        Transfer
-                    </button>
+                    />
                 </div>
             </div>
         );

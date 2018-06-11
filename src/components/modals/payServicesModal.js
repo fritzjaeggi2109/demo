@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { payService } from '../../actions';
 import './pay-services-modal.css';
+import Button from '../button/Button';
 
 class PayServicesModal extends React.Component {
     constructor(props) {
@@ -56,12 +57,10 @@ class PayServicesModal extends React.Component {
                     </div>
                 </div>
                 <div className="btnContainer">
-                    <button
+                    <Button 
+                        btnText="Pay"
                         onClick={this.handlePayment.bind(this)}
-                        className="btn"
-                    >
-                        Pay
-                    </button>
+                    />
                 </div>
             </div>
         );

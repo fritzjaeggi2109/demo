@@ -13,7 +13,7 @@
     padding: 10px 0px;
 }
 
-#login-title{
+.login-title{
     color: #16ab81;
     margin: 5px 0px 15px 0px;
 }
@@ -27,7 +27,7 @@
     margin-bottom: 5px;
 }
 
-#login-btn{
+.login-btn{
     width: 60%;
     border: none;
     font-size: 1rem;
@@ -38,7 +38,7 @@
     border-radius: 3px;
 }
 
-#login-btn:hover{
+.login-btn:hover{
     cursor: pointer;
     background-color: #108060;
 }

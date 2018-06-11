@@ -3,7 +3,7 @@ import './header.css';
 import logo from './logo.png';
 import avatar from './avatar.svg';
 
-const Header = ({user = ''}) => {
+const Header = ({ user = '' }) => {
     return (
         <div className="header">
             <img className="logo" src={logo} alt="logo"/>
